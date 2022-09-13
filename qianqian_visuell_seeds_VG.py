@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 from sklearn import metrics
 from sklearn.manifold import TSNE
-from umap import UMAP
+import umap 
 from sklearn.decomposition import PCA
 
 
@@ -45,7 +45,7 @@ def run_pca(features:pd.DataFrame,labels:pd.DataFrame, n_components:int) -> None
 
 def main():
 
-    data_path_seeds = 'C:/Users/QianqianYu/OneDrive/ECstudy/qianqian_exercise/Qianaian_Visuell_dataanalys_VG/seeds.csv'
+    data_path_seeds = 'seeds.csv'
     data_seeds = pd.read_csv(data_path_seeds)
     print(data_seeds.shape)
     sns.pairplot(data_seeds,hue = "Type")

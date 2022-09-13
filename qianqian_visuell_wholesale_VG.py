@@ -9,9 +9,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 from sklearn import metrics
 from sklearn.manifold import TSNE
-from umap import UMAP
 from sklearn.decomposition import PCA
-
+import umap
 
 
 def run_pca_dbscan(features: pd.DataFrame, eps:int, min_samples:int )-> None:
@@ -60,7 +59,7 @@ def pca_plot_explained_variance(features:pd.DataFrame, plot_range: int, sum_rang
 
 def main():
 
-    data_path_wholesale = 'C:/Users/QianqianYu/OneDrive/ECstudy/qianqian_exercise/Qianaian_Visuell_dataanalys_VG/Wholesale_customers_data.csv'
+    data_path_wholesale = 'Wholesale_customers_data.csv'
     data_wholesale = pd.read_csv(data_path_wholesale)
     print(data_wholesale.shape)
     plot = False
